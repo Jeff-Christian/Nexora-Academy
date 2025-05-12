@@ -31,6 +31,12 @@ const courseSchema = new Schema({
       ref: "Testimonial",
     },
   ],
+  modules: [
+    {
+      type: Schema.ObjectId,
+      ref: "Module",
+    },
+  ],
 });
 
 export const Course =
