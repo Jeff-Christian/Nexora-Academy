@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const courseSchema = new mongoose.Schema({
   title: {
@@ -15,6 +15,10 @@ const courseSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
+    required: true,
+  },
+  category: {
+    type: Schema.ObjectId,
     required: true,
   },
 });
