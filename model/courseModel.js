@@ -21,6 +21,10 @@ const courseSchema = new Schema({
     type: Schema.ObjectId,
     ref: "Category",
   },
+  instructor: {
+    type: Schema.ObjectId,
+    ref: "User",
+  },
 });
 
 export const Course =
