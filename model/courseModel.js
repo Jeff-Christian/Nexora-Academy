@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const courseSchema = new mongoose.Schema({
+const courseSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -19,7 +19,7 @@ const courseSchema = new mongoose.Schema({
   },
   category: {
     type: Schema.ObjectId,
-    required: true,
+    ref: "Category",
   },
 });
 
